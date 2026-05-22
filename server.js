@@ -2,10 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const { sequelize } = require('./models');
-
-// Swagger
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
+const authenticateToken = require('./middlewares/authMiddleware');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -36,7 +35,11 @@ const swaggerOptions = {
     apis: ['./routes/*.js'],
 };
 
+// ... tu código de SwaggerOptions (se queda igual) ...
+
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
+
+// 1. RUTA PÚBLICA PARA SWAGGER (Sin authenticateToken ni filtros)
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Rutas
@@ -50,14 +53,20 @@ const horarioRoutes = require('./routes/horarioRoutes');
 const detalleRoutes = require('./routes/detalleRoutes');
 
 // Endpoints
-app.use('/api', estudianteRoutes);
-app.use('/api', docenteRoutes);
-app.use('/api', apoderadoRoutes);
-app.use('/api', gradoRoutes);
-app.use('/api', authRoutes);
-app.use('/api', cursoRoutes);
-app.use('/api', horarioRoutes);
-app.use('/api', detalleRoutes);
+// Auth es público (login)
+app.use('/api', authRoutes); 
+
+// Las demás rutas están protegidas globalmente
+app.use('/api', authenticateToken, estudianteRoutes);
+app.use('/api', authenticateToken, docenteRoutes);
+app.use('/api', authenticateToken, apoderadoRoutes);
+app.use('/api', authenticateToken, gradoRoutes);
+app.use('/api', authenticateToken, cursoRoutes);
+app.use('/api', authenticateToken, horarioRoutes);
+app.use('/api', authenticateToken, detalleRoutes);
+
+// Iniciar Servidor ...
+
 
 // Iniciar Servidor
 sequelize.sync().then(() => {

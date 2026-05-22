@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/docenteController');
+const authorizeRoles = require('../middlewares/roleMiddleware');
 
 
 
@@ -10,6 +11,11 @@ const controller = require('../controllers/docenteController');
  *   get:
  *     summary: Obtener todos los docentes
  *     tags: [Docente]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
+ *       - profesor
  *     responses:
  *       200:
  *         description: Lista de docentes
@@ -22,6 +28,10 @@ router.get('/docentes', controller.getDocentes);
  *   post:
  *     summary: Crear un nuevo docente
  *     tags: [Docente]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
  *     requestBody:
  *       required: true
  *       content:
@@ -32,7 +42,7 @@ router.get('/docentes', controller.getDocentes);
  *       201:
  *         description: Docente creado
  */
-router.post('/docentes', controller.createDocente);
+router.post('/docentes', authorizeRoles(['admin']), controller.createDocente);
 
 /**
  * @swagger
@@ -40,6 +50,10 @@ router.post('/docentes', controller.createDocente);
  *   delete:
  *     summary: Eliminar un docente por DNI
  *     tags: [Docente]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
  *     parameters:
  *       - in: path
  *         name: dni
@@ -51,6 +65,6 @@ router.post('/docentes', controller.createDocente);
  *       200:
  *         description: Docente eliminado
  */
-router.delete('/docentes/:dni', controller.deleteDocente);
+router.delete('/docentes/:dni', authorizeRoles(['admin']), controller.deleteDocente);
 
 module.exports = router;

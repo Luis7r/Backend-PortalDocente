@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/detalleController');
+const authorizeRoles = require('../middlewares/roleMiddleware');
 
 /**
  * @swagger
@@ -8,11 +9,16 @@ const controller = require('../controllers/detalleController');
  *   get:
  *     summary: Obtener el detalle de cursos
  *     tags: [DetalleCurso]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
+ *       - profesor
  *     responses:
  *       200:
  *         description: Detalle de cursos
  */
-router.get('/detallecurso', controller.getDetalleCurso);
+router.get('/detallecurso', authorizeRoles(['admin', 'profesor']), controller.getDetalleCurso);
 
 /**
  * @swagger
@@ -20,6 +26,11 @@ router.get('/detallecurso', controller.getDetalleCurso);
  *   put:
  *     summary: Actualizar detalle de curso por ID
  *     tags: [DetalleCurso]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
+ *       - profesor
  *     parameters:
  *       - in: path
  *         name: id
@@ -37,6 +48,6 @@ router.get('/detallecurso', controller.getDetalleCurso);
  *       200:
  *         description: Detalle actualizado
  */
-router.put('/detallecurso/:id', controller.updateDetalleCurso);
+router.put('/detallecurso/:id', authorizeRoles(['admin', 'profesor']), controller.updateDetalleCurso);
 
 module.exports = router;

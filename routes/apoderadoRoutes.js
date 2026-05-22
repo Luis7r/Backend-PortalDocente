@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/apoderadoController');
+const authorizeRoles = require('../middlewares/roleMiddleware');
 
 /**
  * @swagger
@@ -8,6 +9,10 @@ const controller = require('../controllers/apoderadoController');
  *   post:
  *     summary: Crear un apoderado
  *     tags: [Apoderado]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
  *     requestBody:
  *       required: true
  *       content:
@@ -18,6 +23,6 @@ const controller = require('../controllers/apoderadoController');
  *       201:
  *         description: Apoderado creado
  */
-router.post('/apoderados', controller.createApoderado);
+router.post('/apoderados', authorizeRoles(['admin']), controller.createApoderado);
 
 module.exports = router;
