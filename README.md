@@ -1,3 +1,306 @@
-# Backend-PortalDocente
 
-Sistema backend para la gestión de calificaciones.
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
+
+Versión actual: **1.0.0**
