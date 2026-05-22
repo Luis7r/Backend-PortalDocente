@@ -1,3 +1,3 @@
 # Portal Docente
 
-<!-- VERSION -->
+Version actual: 1.0.0 <!-- VERSION -->
