@@ -1,18 +1,19 @@
 import json
+import re
 
-# 1. Obtenemos la versión
+# 1. Leer versión
 with open('package.json', 'r') as f:
-    data = json.load(f)
-    version = data.get('version', '1.0.0')
+    version = json.load(f).get('version', '1.0.0')
 
-# 2. Leemos el contenido actual
+# 2. Leer README
 with open('README.md', 'r') as f:
     content = f.read()
 
-# 3. Reemplazamos la etiqueta por la versión
-# Si no encuentra la etiqueta, no hace nada, por eso es vital que esté en el README
-new_content = content.replace("", f"Versión actual: {version} ")
+# 3. Reemplazar usando expresiones regulares
+# Esto busca todo lo que esté entre START y END y lo reemplaza por la versión limpia
+new_text = f"\nVersión actual: {version}\n"
+new_content = re.sub(r'.*', new_text, content, flags=re.DOTALL)
 
-# 4. Guardamos
+# 4. Guardar
 with open('README.md', 'w') as f:
     f.write(new_content)
