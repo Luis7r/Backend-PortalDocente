@@ -17,10 +17,8 @@ nuevo_bloque = f"\nVersión actual: **{version}**\n"
 
 # 4. Lógica de reemplazo segura
 if "" in content and "" in content:
-    # Si encuentra las etiquetas, reemplaza SOLO lo que hay entre ellas
     content = re.sub(r'.*?', nuevo_bloque, content, flags=re.DOTALL)
 else:
-    # Si alguien borró las etiquetas por accidente, no borra el archivo, solo lo añade al final
     content = content + "\n\n" + nuevo_bloque
 
 # 5. Guardar el archivo
