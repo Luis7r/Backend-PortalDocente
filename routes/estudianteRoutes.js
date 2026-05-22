@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/estudianteController');
+const authorizeRoles = require('../middlewares/roleMiddleware');
 
 /**
  * @swagger
@@ -8,11 +9,15 @@ const controller = require('../controllers/estudianteController');
  *   get:
  *     summary: Obtener todos los estudiantes
  *     tags: [Estudiante]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
  *     responses:
  *       200:
  *         description: Lista de estudiantes
  */
-router.get('/estudiantes', controller.getEstudiantes);
+router.get('/estudiantes', authorizeRoles(['admin']), controller.getEstudiantes);
 
 /**
  * @swagger
@@ -20,11 +25,15 @@ router.get('/estudiantes', controller.getEstudiantes);
  *   get:
  *     summary: Obtener estudiantes filtrados
  *     tags: [Estudiante]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
  *     responses:
  *       200:
  *         description: Estudiantes filtrados
  */
-router.get('/filtro', controller.getFiltro);
+router.get('/filtro', authorizeRoles(['admin']), controller.getFiltro);
 
 /**
  * @swagger
@@ -32,6 +41,10 @@ router.get('/filtro', controller.getFiltro);
  *   post:
  *     summary: Crear un estudiante
  *     tags: [Estudiante]
+ *     security:
+ *       - bearerAuth: []
+ *     x-roles:
+ *       - admin
  *     requestBody:
  *       required: true
  *       content:
@@ -42,6 +55,6 @@ router.get('/filtro', controller.getFiltro);
  *       201:
  *         description: Estudiante creado
  */
-router.post('/newestudiantes', controller.createEstudiante);
+router.post('/newestudiantes', authorizeRoles(['admin']), controller.createEstudiante);
 
 module.exports = router;
