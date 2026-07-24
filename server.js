@@ -21,7 +21,11 @@ const swaggerOptions = {
             version: '1.0.0',
             description: 'Documentación de los endpoints del Portal Docente',
         },
-        servers: [{ url: `http://localhost:${PORT}`}],
+        servers: [
+    {
+        url: process.env.API_URL || `http://localhost:${PORT}`
+    }
+],
         components: {
             securitySchemes: {
                 bearerAuth: {
@@ -71,7 +75,7 @@ app.use('/api', authenticateToken, detalleRoutes);
 // Iniciar Servidor
 sequelize.sync().then(() => {
     app.listen(PORT, () => {
-        console.log(`Servidor corriendo en http://localhost:${PORT}`);
-        console.log(`Swagger UI disponible en http://localhost:${PORT}/api-docs`);
+        console.log(`Servidor corriendo en el puerto ${PORT}`);
+        console.log(`Swagger disponible en /api-docs`);
     });
 }).catch(err => console.error('Error de conexión a la BD:', err));
